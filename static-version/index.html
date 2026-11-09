@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Euron — One Student, One Subscription</title>
+  <meta name="description" content="One subscription for industry-ready courses, AI-powered projects, resume tools, job matching and interview prep." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- NAV -->
+  <header class="nav" id="nav">
+    <div class="container nav__inner">
+      <a href="#" class="logo" aria-label="Euron home">
+        <span class="logo__mark">E</span><span>euron</span>
+      </a>
+      <nav class="nav__links" id="navLinks" aria-label="Primary">
+        <a href="#courses">Courses</a>
+        <a href="#projects">Projects</a>
+        <a href="#career">Career Tools</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#faq">FAQ</a>
+        <div class="nav__mobile-cta">
+          <a href="#" class="btn btn--ghost">Log in</a>
+          <a href="#pricing" class="btn btn--primary">Get started</a>
+        </div>
+      </nav>
+      <div class="nav__cta">
+        <a href="#" class="btn btn--ghost">Log in</a>
+        <a href="#pricing" class="btn btn--primary">Get started</a>
+      </div>
+      <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero__glow" aria-hidden="true"></div>
+      <div class="container hero__inner">
+        <div class="hero__copy reveal">
+          <span class="pill"><span class="dot"></span> New: GenAI &amp; Agentic AI tracks are live</span>
+          <h1>One student.<br /><span class="grad">One subscription.</span><br />Every skill you need.</h1>
+          <p class="lead">Courses, hands-on AI projects, a resume builder, job matching and mock interviews — bundled into a single plan so you can go from learning to hired without juggling ten platforms.</p>
+          <div class="hero__actions">
+            <a href="#pricing" class="btn btn--primary btn--lg">Start learning →</a>
+            <a href="#courses" class="btn btn--outline btn--lg">Explore courses</a>
+          </div>
+          <ul class="stats">
+            <li><strong data-count="75">0</strong><span>+ courses</span></li>
+            <li><strong data-count="96">0</strong><span>+ AI projects</span></li>
+            <li><strong data-count="24">0</strong><span>/7 doubt support</span></li>
+          </ul>
+        </div>
+        <div class="hero__visual reveal">
+          <div class="dash">
+            <div class="dash__head">
+              <span class="dash__dots"><i></i><i></i><i></i></span>
+              <span>My learning</span>
+            </div>
+            <div class="dash__card">
+              <div class="dash__row"><b>Generative AI with LLMs</b><span class="tag tag--teal">In progress</span></div>
+              <div class="bar"><span style="--w:68%"></span></div>
+              <small>68% · 14 of 21 modules</small>
+            </div>
+            <div class="dash__card">
+              <div class="dash__row"><b>Data Structures in Python</b><span class="tag tag--amber">Up next</span></div>
+              <div class="bar"><span style="--w:22%"></span></div>
+              <small>22% · 4 of 18 modules</small>
+            </div>
+            <div class="dash__grid">
+              <div class="mini"><small>Resume score</small><b>86<sup>/100</sup></b></div>
+              <div class="mini"><small>Job matches</small><b>12</b></div>
+              <div class="mini"><small>Mock interviews</small><b>3</b></div>
+              <div class="mini"><small>Streak</small><b>19🔥</b></div>
+            </div>
+          </div>
+          <div class="float float--a">✅ Project “RAG Chatbot” submitted</div>
+          <div class="float float--b">💼 New match: ML Engineer</div>
+        </div>
+      </div>
+      <div class="container logos reveal">
+        <p>Learners from our community now work at teams like</p>
+        <div class="logos__row">
+          <span>Northwind</span><span>Globex</span><span>Initech</span><span>Umbrella</span><span>Hooli</span><span>Stark Labs</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- COURSES -->
+    <section class="section" id="courses">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="eyebrow">Course library</span>
+          <h2>Industry-ready courses, all included</h2>
+          <p>Live and self-paced programs built with practitioners. Pick a track or mix and match — your subscription unlocks everything.</p>
+        </div>
+        <div class="tabs reveal" role="tablist" id="courseTabs">
+          <button class="tab is-active" data-filter="all">All</button>
+          <button class="tab" data-filter="ai">AI &amp; GenAI</button>
+          <button class="tab" data-filter="data">Data Science</button>
+          <button class="tab" data-filter="dev">Development</button>
+          <button class="tab" data-filter="cloud">Cloud &amp; DevOps</button>
+        </div>
+        <div class="grid grid--courses" id="courseGrid"></div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section section--tint" id="projects">
+      <div class="container split">
+        <div class="reveal">
+          <span class="eyebrow">AI-powered projects</span>
+          <h2>Build a portfolio that actually gets noticed</h2>
+          <p>Guided, real-world projects with starter code, datasets and automated AI feedback on every submission. Ship work you can demo in an interview.</p>
+          <ul class="checks">
+            <li>Step-by-step milestones with hints when you're stuck</li>
+            <li>Instant AI code review and improvement suggestions</li>
+            <li>One-click deploy and shareable project pages</li>
+          </ul>
+          <a href="#pricing" class="btn btn--primary">Browse projects</a>
+        </div>
+        <div class="project-stack reveal" id="projectStack"></div>
+      </div>
+    </section>
+
+    <!-- CAREER -->
+    <section class="section" id="career">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="eyebrow">Career toolkit</span>
+          <h2>From learning to hired, in one place</h2>
+          <p>Everything after the course is covered too.</p>
+        </div>
+        <div class="grid grid--3">
+          <article class="feature reveal">
+            <div class="feature__icon">📄</div>
+            <h3>AI Resume Builder</h3>
+            <p>Generate ATS-friendly resumes, get a score, and tailor them to any job description in seconds.</p>
+          </article>
+          <article class="feature reveal">
+            <div class="feature__icon">🎯</div>
+            <h3>Smart Job Matching</h3>
+            <p>We match your skills and completed projects with open roles, and tell you what's missing.</p>
+          </article>
+          <article class="feature reveal">
+            <div class="feature__icon">🎙️</div>
+            <h3>Mock Interviews</h3>
+            <p>Practice technical and HR rounds with an AI interviewer and get detailed, actionable feedback.</p>
+          </article>
+          <article class="feature reveal">
+            <div class="feature__icon">🧑‍🏫</div>
+            <h3>Live Mentorship</h3>
+            <p>Weekly live sessions and doubt-clearing with industry mentors across every track.</p>
+          </article>
+          <article class="feature reveal">
+            <div class="feature__icon">🏆</div>
+            <h3>Certificates</h3>
+            <p>Verifiable certificates for each course and project you complete — share them anywhere.</p>
+          </article>
+          <article class="feature reveal">
+            <div class="feature__icon">👥</div>
+            <h3>Community</h3>
+            <p>Study groups, hackathons and peer reviews with thousands of learners worldwide.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="section section--dark">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="eyebrow eyebrow--light">How it works</span>
+          <h2>Four steps to your next role</h2>
+        </div>
+        <ol class="steps">
+          <li class="reveal"><span>01</span><h3>Subscribe once</h3><p>Unlock every course, project and career tool.</p></li>
+          <li class="reveal"><span>02</span><h3>Learn by doing</h3><p>Follow a track and build projects as you go.</p></li>
+          <li class="reveal"><span>03</span><h3>Get job-ready</h3><p>Polish your resume and ace mock interviews.</p></li>
+          <li class="reveal"><span>04</span><h3>Get hired</h3><p>Apply to matched roles with confidence.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- PRICING -->
+    <section class="section" id="pricing">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="eyebrow">Pricing</span>
+          <h2>Simple pricing. Everything included.</h2>
+          <div class="toggle" id="billingToggle">
+            <button class="is-active" data-plan="monthly">Monthly</button>
+            <button data-plan="yearly">Yearly <em>Save 40%</em></button>
+          </div>
+        </div>
+        <div class="grid grid--pricing">
+          <article class="price reveal">
+            <h3>Starter</h3>
+            <p class="muted">Try the platform</p>
+            <div class="price__amt"><span>Free</span></div>
+            <ul class="checks">
+              <li>5 free courses</li>
+              <li>2 guided projects</li>
+              <li>Community access</li>
+            </ul>
+            <a href="#" class="btn btn--outline btn--block">Sign up free</a>
+          </article>
+          <article class="price price--featured reveal">
+            <span class="badge">Most popular</span>
+            <h3>Euron One</h3>
+            <p class="muted">The full subscription</p>
+            <div class="price__amt"><span class="cur">₹</span><span id="priceOne" data-monthly="999" data-yearly="7199">999</span><small id="pricePer">/month</small></div>
+            <ul class="checks">
+              <li>All 75+ courses &amp; live classes</li>
+              <li>All 96+ AI-powered projects</li>
+              <li>Resume builder, job matching &amp; mock interviews</li>
+              <li>Certificates &amp; 24/7 doubt support</li>
+            </ul>
+            <a href="#" class="btn btn--primary btn--block">Get Euron One</a>
+          </article>
+          <article class="price reveal">
+            <h3>Teams</h3>
+            <p class="muted">For colleges &amp; companies</p>
+            <div class="price__amt"><span>Custom</span></div>
+            <ul class="checks">
+              <li>Everything in Euron One</li>
+              <li>Admin dashboard &amp; analytics</li>
+              <li>Dedicated success manager</li>
+            </ul>
+            <a href="#" class="btn btn--outline btn--block">Contact sales</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="section section--tint">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="eyebrow">Learner stories</span>
+          <h2>What learners say</h2>
+        </div>
+        <div class="grid grid--3">
+          <figure class="quote reveal">
+            <blockquote>“Having courses, projects and interview practice in one place kept me consistent. I built three portfolio projects in two months.”</blockquote>
+            <figcaption><span class="avatar">A</span><div><b>Sample Learner</b><small>Data Science track</small></div></figcaption>
+          </figure>
+          <figure class="quote reveal">
+            <blockquote>“The AI feedback on my project code was like having a senior engineer reviewing my pull requests every day.”</blockquote>
+            <figcaption><span class="avatar">R</span><div><b>Sample Learner</b><small>GenAI track</small></div></figcaption>
+          </figure>
+          <figure class="quote reveal">
+            <blockquote>“Mock interviews showed me exactly where I was weak. The resume builder tailored my CV for every application.”</blockquote>
+            <figcaption><span class="avatar">S</span><div><b>Sample Learner</b><small>Web Development track</small></div></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" id="faq">
+      <div class="container container--narrow">
+        <div class="section__head reveal">
+          <span class="eyebrow">FAQ</span>
+          <h2>Frequently asked questions</h2>
+        </div>
+        <div class="faq" id="faqList">
+          <details class="reveal"><summary>What does one subscription include?</summary><p>Every course, live class, AI-powered project and career tool on the platform — no add-ons or per-course fees.</p></details>
+          <details class="reveal"><summary>Are the courses beginner-friendly?</summary><p>Yes. Each track starts from fundamentals and progresses to advanced, industry-level topics.</p></details>
+          <details class="reveal"><summary>Do I get a certificate?</summary><p>You receive a verifiable certificate for every course and project you complete.</p></details>
+          <details class="reveal"><summary>Can I cancel anytime?</summary><p>Absolutely. Cancel from your account settings and keep access until the end of your billing period.</p></details>
+          <details class="reveal"><summary>Is there placement assistance?</summary><p>Job matching, resume tools and mock interviews are included, along with referrals to partner companies where available.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+      <div class="container cta__inner reveal">
+        <h2>Ready to level up your career?</h2>
+        <p>Join thousands of learners building real skills with one simple subscription.</p>
+        <a href="#pricing" class="btn btn--light btn--lg">Start your journey →</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div>
+        <a href="#" class="logo logo--light"><span class="logo__mark">E</span><span>euron</span></a>
+        <p class="muted">One student, one subscription — courses, projects and career tools in a single platform.</p>
+        <form class="newsletter" id="newsletter">
+          <input type="email" placeholder="Your email" required aria-label="Email" />
+          <button class="btn btn--primary" type="submit">Subscribe</button>
+        </form>
+        <p class="newsletter__msg" id="newsletterMsg" role="status"></p>
+      </div>
+      <div><h4>Platform</h4><a href="#courses">Courses</a><a href="#projects">Projects</a><a href="#career">Career Tools</a><a href="#pricing">Pricing</a></div>
+      <div><h4>Company</h4><a href="#">About</a><a href="#">Careers</a><a href="#">Blog</a><a href="#">Contact</a></div>
+      <div><h4>Legal</h4><a href="#">Terms</a><a href="#">Privacy</a><a href="#">Refund policy</a></div>
+    </div>
+    <div class="container footer__bottom">
+      <small>© <span id="year"></span> Euron clone — built for learning purposes.</small>
+      <div class="socials"><a href="#" aria-label="LinkedIn">in</a><a href="#" aria-label="YouTube">▶</a><a href="#" aria-label="X">𝕏</a></div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
